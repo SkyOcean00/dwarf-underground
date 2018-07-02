@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import './App.css';
 import Header from './Header'
+import Footer from './Footer'
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
         <main className="expanded row">
           <div className="large-8 medium-12 columns article">
             <h2 className="article-title">Gold Madness - Fact or Fiction?</h2>
+            
             <div className="avatar">
               <img src="http://www.zbrushcentral.com/attachment.php?attachmentid=376082" alt="author" />
               <div className="author-info">
@@ -19,6 +21,7 @@ class App extends Component {
                 <p className="date">on 28 April, 3018 of the Third Age</p>
               </div>
             </div>
+            
             <section className="article-body">
               <p><span className="article-start gold">E</span>psum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum e pluribus unum. Defacto lingo est igpay atinlay. Marquee selectus non provisio incongruous feline nolo contendre. Gratuitous octopus niacin, sodium glutimate. Quote meon an estimate et non interruptus stadium.</p>
 
@@ -34,6 +37,7 @@ class App extends Component {
 
               <p>Sic tempus fugit esperanto hiccup estrogen. Glorious baklava ex librus hup hey ad infinitum. Non sequitur condominium facile et geranium incognito. Epsum factorial non deposit quid pro quo hic escorol. Marquee selectus non provisio incongruous feline nolo contendre Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum e pluribus unum.</p>
             </section>
+            
             <div className="article-links">
               <a className="article-link" href="#">
                 <i className="fa fa-comments-o"></i>
@@ -45,6 +49,7 @@ class App extends Component {
               </a>
             </div>
           </div>
+          
           <aside className="large-4 medium-12 columns">
             <div className="ad">
               <h3>The Last Hammer You'll Ever Need</h3>
@@ -88,10 +93,7 @@ class App extends Component {
           </div>
         </main>
 
-        <footer className="expanded row">
-          <h6>&copy; 2017 Erebor Industries</h6>
-          <h6 className="float-right">All rights reserved</h6>
-        </footer>
+        <Footer />
       </div>
     );
   }
