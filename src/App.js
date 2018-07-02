@@ -8,7 +8,7 @@ import Section from './Section'
 import Aside from './Aside'
 import Comment from './Comment'
 import Share from './Share'
-
+import Article1 from './Article1'
 
 class App extends Component {
   render() {
@@ -36,12 +36,8 @@ class App extends Component {
           
           <div className="small-12 columns other-articles">
             <h2>From around the Realm</h2>
-            <div className="small-6 medium-3 columns other-article">
-              <a href="#">
-                <img src="https://www.enclavepublishing.com/wp-content/uploads/2015/11/tumblr_inline_mtvwr6T4qH1r8eb4v.gif" alt="orc" />
-                <p>Single Orcs in Indianapolis</p>
-              </a>
-            </div>
+            <Article1 />
+            
             <div className="small-6 medium-3 columns other-article">
               <a href="#">
                 <img src="https://images.fineartamerica.com/images-medium-large-5/rocky-mountain-landscape-meadow-in-spring-western-panorama-with-wildflowers-square-format-walt-curlee.jpg" alt="mountain" />
