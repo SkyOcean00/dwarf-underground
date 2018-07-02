@@ -6,11 +6,15 @@ import Footer from './Footer'
 import Avatar from './Avatar'
 import Section from './Section'
 import Aside from './Aside'
+import Comment from './Comment'
+import Share from './Share'
+
 
 class App extends Component {
   render() {
     return (
       <div className="App">
+
         <Header />
 
         <main className="expanded row">
@@ -22,14 +26,9 @@ class App extends Component {
             <Section />
             
             <div className="article-links">
-              <a className="article-link" href="#">
-                <i className="fa fa-comments-o"></i>
-                <span className="article-link-text">Comments</span>
-              </a>
-              <a className="article-link" href="#">
-                <i className="fa fa-share"></i>
-                <span className="article-link-text">Share Post</span>
-              </a>
+              <Comment />
+              
+              <Share />
             </div>
           </div>
           
@@ -65,6 +64,7 @@ class App extends Component {
         </main>
 
         <Footer />
+
       </div>
     );
   }
