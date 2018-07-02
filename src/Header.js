@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 const Header = () => {
-  return(
+  return (
     <div className="expanded row header">
       <div className="clearfix">
         <div className="float-left logo">
@@ -20,6 +20,5 @@ const Header = () => {
     </div>
   )
 }
-
 
 export default Header
