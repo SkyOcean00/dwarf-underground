@@ -7,6 +7,7 @@ import Share from './Share'
 import Otherarticle from './Otherarticle'
 
 const Main =() =>{
+  let toggleStyle={display: 'none'};
     return(
          <main className="expanded row">
           <div className="large-8 medium-12 columns article">
@@ -20,6 +21,13 @@ const Main =() =>{
               <Comment />
               
               <Share />
+              <br />
+              <br />
+              <form id="comment1" style={toggleStyle}>
+                <input type="text" className="inputfield"   />
+                <br />
+                <button type="submit" className="article-link buttontext">submit comment</button>
+              </form>
             </div>
           </div>
           

@@ -3,6 +3,14 @@ body {
   background: whitesmoke;
 }
 
+.inputfield{
+  text-align: center;
+  border: 1px solid red;
+  padding: 2.5rem ;
+  display: block;
+  margin : auto;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Cinzel Decorative', cursive;
 }
@@ -16,6 +24,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .header h1, .header h2, .header h3, .header h4 {
   font-weight: 900;
+ 
 }
 
 .header h1 {
@@ -151,6 +160,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .article-link-text {
   padding-left: 5px;
+  color:white;
+}
+.buttontext{
+  margin-top: 5px;
+  font-size : 20px; 
+  height: 36px;
 }
 
 aside {
