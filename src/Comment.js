@@ -1,5 +1,4 @@
 import React from 'react'
-//import Commentfield from './Commentfield'
 
 function handleclick(e){
   let x = document.getElementById("comment1")
