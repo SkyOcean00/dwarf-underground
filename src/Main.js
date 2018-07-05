@@ -1,64 +1,82 @@
-import React from 'react'
+import React, { Component }  from 'react'
 import Avatar from './Avatar'
 import Section from './Section'
 import Aside from './Aside'
 import Comment from './Comment'
 import Share from './Share'
 import Otherarticle from './Otherarticle'
-//import CommentArea from './CommentArea'
+import CommentArea from './CommentArea'
 
 
-const Main =() =>{
-  let toggleStyle={display: 'none'};
-  
-  function handleSubmit(e){
-    e.preventDefault()
-    e.target.style.display = "block";
-    let Allcomment = document.querySelector('.inputfield').value;
-   
-    return(
-      <p innerHTML= {Allcomment} />
-    )
+const toggleStyle = { display: 'none' };
+
+class Main extends Component  {
+  constructor(){
+    super()
+    this.state = {
+      comments: [],
+    }
   }
-    return(
-         <main className="expanded row">
-          <div className="large-8 medium-12 columns article">
-            <h2 className="article-title">Gold Madness - Fact or Fiction?</h2>
-            
-            <Avatar />
-            
-            <Section />
-            
-            <div className="article-links">
-              <Comment />
-              
-              <Share />
-              <br />
-              <br />
-              
-              <form id="comment1" 
-                style={toggleStyle}
-                onSubmit={handleSubmit}
-                >
-                <input type="text" className="inputfield"   />
-                <br />
-                <input type="submit" className="article-link buttontext"
-                value="submit comment" />
-              </form>
 
-              <div id="com1" style={toggleStyle} >
-              
-                
-              </div>
-            </div>
-          </div>
-          
-          <Aside />
-          
-          <Otherarticle />
 
-        </main>
-    );
+  handleSubmit = (e)=> {
+    e.preventDefault()
+    this.addComment(document.querySelector('.inputfield').value)
+    // return (document.querySelector('.inputfield').value
+    //   <p innerHTML={Allcomment} />
+    // )
+  }
+
+  addComment = (comment) => {
+    
+    const comss = [...this.state.comments]
+    comss.push(comment)
+    this.setState({comments: comss} )
+    // debugger;
+  }
+
+  render(){
+    return (
+    <main className="expanded row">
+      <div className="large-8 medium-12 columns article">
+        <h2 className="article-title">Gold Madness - Fact or Fiction?</h2>
+
+        <Avatar />
+
+        <Section />
+
+        <div className="article-links">
+          <Comment />
+
+          <Share />
+          <br />
+          <br />
+
+          <form id="comment1"
+            style={toggleStyle}
+            onSubmit={this.handleSubmit}
+          >
+            <input type="text" className="inputfield" />
+            <br />
+            <input type="submit" className="article-link buttontext"
+              value="submit comment" />
+          </form>
+
+          <CommentArea id="com1" 
+            style={toggleStyle} 
+            comments={this.state.comments} />
+
+         
+        </div>
+      </div>
+
+      <Aside />
+
+      <Otherarticle />
+
+    </main>
+  );
+}
 }
 
 

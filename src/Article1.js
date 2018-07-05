@@ -28,7 +28,7 @@ const Article1 =() =>{
    
    return(
        <div>
-            {articles.map(article =><Links article={article} />)}
+            {articles.map(article =><Links article={article} key={article.id} />)}
       </div>
     );
 }
